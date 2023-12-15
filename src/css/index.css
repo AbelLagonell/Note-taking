@@ -9,4 +9,6 @@ body {
     width: 100%;
     background-color: rgb(145, 243, 243);
     -webkit-app-region: drag;
+    text-align: center;
+    justify-content: center;
 }

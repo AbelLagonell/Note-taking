@@ -1,4 +1,4 @@
-import { BrowserWindow, app } from "electron"
+import { BrowserWindow, app, ipcMain } from "electron"
 
 require('electron-reloader')(module);
 
@@ -10,9 +10,13 @@ const createWindow = () => {
         frame: false,
     });
 
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
     mainWindow.loadFile("src/index.html");
 };
+
+ipcMain.on('close-me', (evt, arg) => {
+  app.quit()
+})
 
 //Loads in the main window when electron is ready to start
 app.whenReady().then(createWindow);

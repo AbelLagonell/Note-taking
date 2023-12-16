@@ -1,30 +1,39 @@
 {
   "name": "note-taking",
+  "productName": "note-taking",
   "version": "1.0.0",
-  "main": "main.js",
+  "description": "My Electron application description",
+  "main": ".vite/build/main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AbelLagonell/Note-taking.git"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
   },
   "keywords": [],
-  "author": "Abel Lagonell",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AbelLagonell/Note-taking/issues"
+  "author": {
+    "name": "AbelLagonell",
+    "email": "alagonell@outlook.com"
   },
-  "homepage": "https://github.com/AbelLagonell/Note-taking#readme",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^28.0.0",
-    "typescript": "^5.3.3"
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "@electron-forge/plugin-vite": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "electron": "28.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~4.5.4"
   },
   "dependencies": {
-    "electron-reloader": "^1.2.3",
-    "ts-node": "^10.9.2",
-    "tsconfig.json": "^1.0.11"
-  },
-  "description": ""
+    "electron-squirrel-startup": "^1.0.0"
+  }
 }

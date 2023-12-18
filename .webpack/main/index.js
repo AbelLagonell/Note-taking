@@ -1022,6 +1022,7 @@ const createWindow = () => {
             preload: '/home/abel/Electron-Apps/Note-taking/.webpack/renderer/main_window/preload.js',
         },
     });
+    mainWindow.removeMenu();
     // and load the index.html of the app.
     mainWindow.loadURL('http://localhost:3000/main_window');
     // Open the DevTools.

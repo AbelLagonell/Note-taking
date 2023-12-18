@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "target": "ES6",
     "allowJs": true,
     "module": "commonjs",
@@ -11,7 +12,6 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react-jsx",
     "paths": {
       "*": ["node_modules/*"]
     }
